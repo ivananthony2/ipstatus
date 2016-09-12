@@ -1,21 +1,20 @@
 require 'open-uri'
 remote_ip = open('http://whatismyip.akamai.com').read
 
-old_ip == remote_ip
+old_ip = remote_ip
 
 loop do
-if remote_ip != remote_ip
+		if remote_ip != remote_ip
 
-new_ip == remote_ip
+	new_ip = remote_ip
 
-require 'gmail'
+		require 'gmail'
 
-gmail = Gmail.connect('isaiahavanderpas@gmail.com', 'jQuerys1') do |gmail|
+	gmail = Gmail.connect('isaiahavanderpas@gmail.com', 'jQuerys1') do |gmail|
 	 if gmail.logged_in? == true
 	 	puts 'yay'
 	 end
 
-# ==>	 	gmail.inbox.count    print gmail.inbox.count(:unread)
 
 gmail.deliver 	do
   to "isaiahavanderpas@gmail.com"
@@ -24,7 +23,7 @@ gmail.deliver 	do
     body "Your old address was #{old_ip}. Your new address is #{new_ip}"
   			end
   				end
-end
+		end
 end
 
-end
+	end
