@@ -19,9 +19,10 @@ loop do
         text_part do
           body "Your old address was #{old_ip}. Your new address is #{new_ip}"
         end
-        old_ip = remote_ip 
       end
     end
+
+    old_ip = remote_ip 
   end
 
   sleep(10)
