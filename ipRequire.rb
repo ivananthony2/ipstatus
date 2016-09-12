@@ -1,3 +1,4 @@
+
 require 'gmail'
 require 'open-uri'
 
@@ -8,7 +9,7 @@ loop do
   remote_ip = open('http://whatismyip.akamai.com').read
 
   if old_ip != remote_ip
-    Gmail.connect('isaiahavanderpas@gmail.com', ENV["PASSWORD"]) do |g|
+    Gmail.connect(ENV["EMAIL"], ENV["PASSWORD"]) do |g|
       if g.logged_in? == true
         puts 'Gmail Logged ON'
       end
