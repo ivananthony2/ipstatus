@@ -17,7 +17,7 @@ loop do
         to "isaiahavanderpas@gmail.com"
         subject "Your Remote IP Address Has Been Changed"
         text_part do
-          body "Your old address was #{old_ip}. Your new address is #{new_ip}"
+          body "Your old address was #{old_ip}. Your new address is #{remote_ip}"
         end
       end
     end
